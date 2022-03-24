@@ -22,11 +22,19 @@ public class Formatting {
         return addressingCustomer;
     }
 
+    static String formatDescription(String[] desc){
+        String s = "";
+        for (int i = 0; i < desc.length; i++){
+            s = s + (i + 1) + ") " + desc[i] + "\n";
+        }
+        return s;
+    }
+
     static void signOff(Document document){
         ParagraphStyle style1 = new ParagraphStyle(document);
         style1.setName("signStyle");
         style1.getCharacterFormat().setFontName("Arial");
-        style1.getCharacterFormat().setFontSize(10f);
+        style1.getCharacterFormat().setFontSize(11f);
         document.getStyles().add(style1);
 
         Section section = document.getSections().get(0);
@@ -39,7 +47,7 @@ public class Formatting {
         ParagraphStyle style1 = new ParagraphStyle(document);
         style1.setName("Style");
         style1.getCharacterFormat().setFontName("Arial");
-        style1.getCharacterFormat().setFontSize(10f);
+        style1.getCharacterFormat().setFontSize(11f);
         document.getStyles().add(style1);
 
         Section section = document.getSections().get(0);
@@ -63,7 +71,7 @@ public class Formatting {
                 "Ashford," + "\n" +
                 "Kent, CT16 8YY" + "\n");
         textRange.getCharacterFormat().setFontName("Arial");
-        textRange.getCharacterFormat().setFontSize(10f);
+        textRange.getCharacterFormat().setFontSize(11f);
         addressQFF.getFormat().setHorizontalAlignment(HorizontalAlignment.Left);
     }
 

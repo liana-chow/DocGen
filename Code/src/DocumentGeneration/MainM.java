@@ -7,6 +7,7 @@ public class MainM {
                 "M", "DF65 POT", "2021-01-05"};
 
 
+
         MOTReminder mot = new MOTReminder();
         mot.generate(details);
         System.out.println("Creation Successful");
