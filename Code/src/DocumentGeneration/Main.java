@@ -26,6 +26,10 @@ public class Main {
                 {"", "H456-9UI", "Volva", "S34", "2008-2015", "124.34", "2", "0", "0", "3"}};
         //{0partName, 1code, 2manufacturer, 3vehicle type, 4years,
         // 5price, 6initial stock level, 7used, 8delivery, 9low level}}
+        String[] comp = {"Fjord Distribution Ltd", "25 The Causeway, Staines, Middlesex"};
+        String[][] stockreord = {
+                {"Engine Block", "X93456", "Fjord", "Krapa", "2011-2015", "11.52", "8", "0", "3", "10"},
+                {"Radiator", "C4563 ", "Fjord", "Ofcorsa", "2010-2021", "36.25", "7", "0", "0", "10"}};
 
 
 
@@ -33,8 +37,10 @@ public class Main {
         //JobInvoice mot = new JobInvoice();
         //moe.generate(details);
         //mot.generate(details,vehicle,work,jobDetails,mechanicDetails);
-        StockReport stonk = new StockReport();
-        stonk.generate("Liana","01/11/2021", "30/11/2021", stock);
+        //StockReport stonk = new StockReport();
+        //stonk.generate("Liana","01/11/2021", "30/11/2021", stock);
+        PartsOrder pant = new PartsOrder();
+        pant.generate("Liana",comp, stockreord);
         System.out.println("Creation Successful");
     }
 }
