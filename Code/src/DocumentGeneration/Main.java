@@ -31,6 +31,36 @@ public class Main {
                 {"Engine Block", "X93456", "Fjord", "Krapa", "2011-2015", "11.52", "8", "0", "3", "10"},
                 {"Radiator", "C4563 ", "Fjord", "Ofcorsa", "2010-2021", "36.25", "7", "0", "0", "10"}};
 
+        String[][] reports = {
+                {"105", "11.30", "MOT", "Liana"},
+                {"35", "12.30", "Annual Service", "Mo"},
+                {"15", "13.30", "MOT", "Atahan"},
+                {"125", "11.30", "MOT", "Atahan"},
+                {"65", "16.30", "Repairs", "Atahan"},
+                {"40", "20.30", "MOT", "Liana"},
+                {"45", "30.30", "MOT", "Mo"},
+                {"145", "40.30", "Annual Service", "Jeremy"},
+                {"15", "50.30", "MOT", "Jeremy"},
+                {"20", "10.30", "Repairs", "Vlad"},
+                {"20", "10.30", "Repairs", "Ameen"},
+                {"200", "13.30", "Other", "Vlad"},
+                {"15", "15.30", "Annual Service", "Liana"},
+        };
+
+        String[][] monkreports = {
+                {"Account Holder", "MOT"},
+                {"Casual", "Repairs"},
+                {"Casual", "Annual Service"},
+                {"Account Holder", "Other"},
+                {"Casual", "MOT"},
+                {"Account Holder", "MOT"},
+                {"Account Holder", "MOT"},
+                {"Casual", "MOT"},
+                {"Account Holder", "Repairs"},
+                {"Account Holder", "MOT"},
+                {"Account Holder", "Annual Service"},
+        };
+
 
 
         //MOTReminder moe = new MOTReminder();
@@ -39,8 +69,13 @@ public class Main {
         //mot.generate(details,vehicle,work,jobDetails,mechanicDetails);
         //StockReport stonk = new StockReport();
         //stonk.generate("Liana","01/11/2021", "30/11/2021", stock);
-        PartsOrder pant = new PartsOrder();
-        pant.generate("Liana",comp, stockreord);
+        //PartsOrder pant = new PartsOrder();
+        //pant.generate("Liana",comp, stockreord);
+        //JobReport jonk = new JobReport();
+        //MonthlyReport monk = new MonthlyReport();
+        //monk.generate("20-03-2022", "20-04-2022", monkreports);
+        JobReport jronk = new JobReport();
+        jronk.generate("20-03-2022", "20-04-2022", reports);
         System.out.println("Creation Successful");
     }
 }
